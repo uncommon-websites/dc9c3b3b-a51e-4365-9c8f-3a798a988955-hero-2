@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KickStart Sports - File Sharing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F7F7F8] font-sans antialiased text-gray-900 overflow-x-hidden min-h-screen flex flex-col items-center selection:bg-[#0066FF] selection:text-white">
+
+    <!-- Navigation -->
+    <div class="w-full flex justify-center pt-6 px-4">
+        <nav class="animate-fade-in delay-0 flex items-center gap-7 rounded-full bg-white p-1.5 pr-2 shadow-[0_2px_12px_rgba(0,0,0,0.04)] border border-gray-100/80">
+            <div class="flex items-center gap-2.5 pl-3">
+                <div class="flex h-6 w-6 items-center justify-center rounded-md bg-[#0066FF]">
+                    <svg class="h-3.5 w-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                    </svg>
+                </div>
+                <span class="font-semibold text-[15px] text-gray-900 tracking-tight">KickStart Sports</span>
+            </div>
+            <div class="flex items-center gap-6 px-2 text-[14px] font-medium text-gray-500">
+                <a href="#" class="hover:text-gray-900 transition-colors duration-200">Updates</a>
+                <a href="#" class="hover:text-gray-900 transition-colors duration-200">Pricing</a>
+            </div>
+            <a href="#" class="flex items-center gap-1.5 rounded-full bg-[#0066FF] px-4 py-2 text-[14px] font-medium text-white transition-all duration-200 hover:bg-blue-600 active:scale-95">Get Representation</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="relative mt-24 flex w-full max-w-[1000px] flex-col items-center px-4 text-center sm:mt-32">
+        
+        <!-- Floating Element Left -->
+        <div class="animate-scale-in delay-400 absolute left-0 top-12 hidden lg:block xl:-left-8">
+            <div class="relative">
+                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/dc9c3b3b-a51e-4365-9c8f-3a798a988955/hero-2-img-0-1774750010820.png" alt="Abstract Art Thumbnail" class="h-[140px] w-[180px] rounded-[20px] object-cover shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] border border-white/40">
+                <div class="absolute -bottom-3 -right-3 rounded-full bg-[#FF8A00] px-4 py-1.5 text-[13px] font-medium text-white shadow-lg">Giel</div>
+            </div>
+        </div>
+
+        <!-- Floating Element Right -->
+        <div class="animate-scale-in delay-400 absolute right-0 top-20 hidden lg:block xl:-right-8">
+            <div class="relative flex h-[140px] w-[116px] flex-col items-center justify-center rounded-[24px] bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-100">
+                <!-- Folded corner simulation -->
+                <div class="absolute top-0 right-0 w-10 h-10 bg-[#F7F7F8] rounded-bl-[20px] border-l border-b border-gray-100"></div>
+                
+                <div class="mb-2 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 z-10">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#0066FF]">
+                        <svg class="h-4 w-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <span class="text-[13px] font-medium text-gray-400 z-10">MP4</span>
+                <div class="absolute -bottom-3 -right-5 rounded-full bg-[#FF8A00] px-4 py-1.5 text-[13px] font-medium text-white shadow-lg z-20">Jean</div>
+            </div>
+        </div>
+
+        <!-- Typography & CTA -->
+        <div class="relative z-10 flex flex-col items-center">
+            <h1 class="animate-fade-in-up delay-100 text-balance text-[56px] font-semibold tracking-tighter text-[#111827] sm:text-[72px] md:text-[80px] leading-[1.05]">Maximize Your Athletic Career Earnings and Longevity</h1>
+            
+            <p class="animate-fade-in-up delay-200 mt-6 text-pretty text-[18px] text-gray-500 sm:text-[20px] max-w-[520px] leading-relaxed">Professional sports management with data-driven contract negotiation and personalized career strategies for elite athletes.</p>
+            
+            <div class="animate-fade-in-up delay-300 mt-10 flex flex-col items-center gap-3">
+                <button class="flex items-center gap-2 rounded-full bg-[#0066FF] px-7 py-3.5 text-[16px] font-medium text-white shadow-[0_8px_20px_-6px_rgba(0,102,255,0.5)] transition-all duration-200 hover:bg-blue-600 active:scale-95">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    Upload File
+                </button>
+                <span class="text-[13px] font-medium text-gray-400">2GB for free</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- UI Mockup Container -->
+    <div class="animate-fade-in-up delay-500 mt-24 w-full max-w-[1100px] px-4 pb-0">
+        <div class="flex h-[400px] w-full flex-col overflow-hidden rounded-t-[32px] bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-gray-200/60">
+            
+            <!-- Mockup Header -->
+            <div class="flex items-center justify-between border-b border-gray-100 px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <!-- Palet Dropdown -->
+                    <button class="flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50">
+                        <div class="flex h-5 w-5 items-center justify-center rounded-md bg-black text-[10px] font-bold text-white">P.</div>
+                        Palet
+                        <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <!-- Untitled Dropdown -->
+                    <button class="flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50">
+                        <svg class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                        Untitled
+                        <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                    <button class="flex items-center gap-2 rounded-xl border border-gray-200 px-4 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50">
+                        <svg class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                        Download
+                    </button>
+                    <button class="flex items-center gap-2 rounded-xl bg-[#0066FF] px-4 py-2 text-[14px] font-medium text-white transition-all duration-200 hover:bg-blue-600 active:scale-95">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        Share
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mockup Content Area -->
+            <div class="flex flex-1 items-center justify-center bg-[#F9FAFB] p-8">
+                <div class="flex h-[280px] w-full max-w-[480px] flex-col items-center justify-center rounded-[24px] border-2 border-dashed border-gray-200 bg-white">
+                    <div class="mb-6 flex gap-6 text-gray-400">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/></svg>
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
